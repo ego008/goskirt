@@ -2,7 +2,7 @@ package goskirt
 
 /*
 #cgo CFLAGS: -O3 -fPIC -Wall -Werror -Wsign-compare
-#cgo LDFLAGS: -O3 -Wall -Werror
+//#cgo LDFLAGS: -O3 -Wall -Werror
 #include "markdown.h"
 #include "buffer.h"
 #include "html.h"
