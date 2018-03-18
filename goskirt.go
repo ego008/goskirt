@@ -94,7 +94,8 @@ func render(w io.Writer, extensions, renderModes, rndr uint, p []byte) (n int, e
 	}
 
 	//C.sd_markdown(ob, &ib, C.uint(extensions), &callbacks, unsafe.Pointer(&options))
-	md = C.sd_markdown_new(0, 16, &callbacks, unsafe.Pointer(&options))
+	//md = C.sd_markdown_new(0, 16, &callbacks, unsafe.Pointer(&options))
+	md = C.sd_markdown_new(C.uint(extensions), 16, &callbacks, unsafe.Pointer(&options))
 	C.sd_markdown_render(ob, ib.data, ib.size, md)
 	C.sd_markdown_free(md)
 
